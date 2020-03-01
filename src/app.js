@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 
-//Json conversor middleware
+//Conversor Json
 app.use(express.json());
 
 
@@ -15,7 +15,7 @@ app.use(function(req, res, next){
     next();
 });
 
-//Routes
+//Rota
 const transactions = require('./routes/transactionRoutes');
 app.use('/transaction', transactions);
 
